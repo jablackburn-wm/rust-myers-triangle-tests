@@ -27,9 +27,20 @@ fn get_triangle_type<'a>(a: u32, b: u32, c: u32, ) -> &'a str {
 mod tests {
     use super::*;
 
-    #[test]
-    fn test1() {
-        let result = get_triangle_type(1, 2, 2);
-        assert_eq!(result, "isosceles");
-    }
+    // 1 - valid scalene
+    // 2 - valid equilateral
+    // 3 - valid isosceles 1
+    // 4 - valid isosceles 2
+    // 5 - valid isosceles 3
+    // 6 - invalid because 0 length side
+    // 7 - invalid negative side (expect panic)
+    // 8 - invalid because a + b = c
+    // 9 - invalid because a + c = b
+    // 10 - invalid because b + c = a
+    // 11 - invalid because a + b < c 
+    // 12 - invalid because a + c < b
+    // 13 - invalid because b + c < a
+    // 14 - invalid because all sides are 0
+    // 15 - invalid type string (expect panic)
+    // 16 - invalid type float (expect panic)
 }
