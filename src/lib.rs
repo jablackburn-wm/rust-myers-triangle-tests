@@ -22,3 +22,14 @@ fn get_triangle_type<'a>(a: u32, b: u32, c: u32, ) -> &'a str {
     }
     return "scalene";
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test1() {
+        let result = get_triangle_type(1, 2, 2);
+        assert_eq!(result, "isosceles");
+    }
+}
