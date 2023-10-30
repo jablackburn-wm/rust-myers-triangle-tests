@@ -3,7 +3,7 @@ fn main() {
 }
 
 
-fn get_triangle_type(a: u32, b: u32 c: u32) -> &str {
+fn get_triangle_type<'a>(a: u32, b: u32, c: u32, ) -> &'a str {
 
     let mut longest_side = a;
 
@@ -27,3 +27,4 @@ fn get_triangle_type(a: u32, b: u32 c: u32) -> &str {
     }
     return "scalene";
 
+}
