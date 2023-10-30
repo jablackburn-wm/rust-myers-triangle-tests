@@ -1,10 +1,5 @@
-fn main() {
-    println!("Hello, world!");
-}
-
 
 fn get_triangle_type<'a>(a: u32, b: u32, c: u32, ) -> &'a str {
-
     let mut longest_side = a;
 
     if b > a {
@@ -26,5 +21,4 @@ fn get_triangle_type<'a>(a: u32, b: u32, c: u32, ) -> &'a str {
         return "isosceles";
     }
     return "scalene";
-
 }
