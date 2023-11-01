@@ -28,10 +28,42 @@ mod tests {
     use super::*;
 
     // 1 - valid scalene
+    #[test]
+    fn valid_scalene() {
+        let result = get_triangle_type(2, 3, 4);
+        assert_eq!(result, "scalene");
+    }
+
     // 2 - valid equilateral
+    #[test]
+    fn valid_equilateral() {
+        let result = get_triangle_type(1, 1, 1);
+        assert_eq!(result, "equilateral");
+    }
+
     // 3 - valid isosceles 1
+    #[test]
+    fn valid_isosceles1() {
+        let result = get_triangle_type(1, 2, 2);
+        assert_eq!(result, "isosceles");
+    }
+
     // 4 - valid isosceles 2
+    #[test]
+    fn valid_isosceles2() {
+        let result = get_triangle_type(2, 1, 2);
+        assert_eq!(result, "isosceles");
+    }
+
     // 5 - valid isosceles 3
+    #[test]
+    fn valid_isosceles3() {
+        let result = get_triangle_type(2, 2, 1);
+        assert_eq!(result, "isosceles");
+    }
+
+
+
     // 6 - invalid because 0 length side
     // 7 - invalid negative side (expect panic)
     // 8 - invalid because a + b = c
