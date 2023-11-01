@@ -85,17 +85,42 @@ mod tests {
     }
 
     // 9 - invalid because a + b < c 
+    #[test]
+    #[should_panic(expected ="invalid triangle")]
+    fn invalid_side_too_long_1() {
+        let _result = get_triangle_type(1, 1, 3);
+    }
 
     // 10 - invalid because a + c < b
+    #[test]
+    #[should_panic(expected ="invalid triangle")]
+    fn invalid_side_too_long_2() {
+        let _result = get_triangle_type(1, 3, 1);
+    }
 
     // 11 - invalid because b + c < a
+    #[test]
+    #[should_panic(expected ="invalid triangle")]
+    fn invalid_side_too_long_3() {
+        let _result = get_triangle_type(3, 1, 1);
+    }
 
 
 
 
     // 12 - invalid because 0 length side
+    #[test]
+    #[should_panic(expected ="invalid triangle")]
+    fn invalid_side_length_zero() {
+        let _result = get_triangle_type(0, 1, 1);
+    }
 
     // 13 - invalid because all sides are 0
+    #[test]
+    #[should_panic(expected ="invalid triangle")]
+    fn invalid_all_side_lengths_zero() {
+        let _result = get_triangle_type(0, 0, 0);
+    }
 
     // 14 - invalid negative side (expect panic)
 
