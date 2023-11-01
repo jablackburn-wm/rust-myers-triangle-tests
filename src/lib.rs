@@ -122,10 +122,6 @@ mod tests {
         let _result = get_triangle_type(0, 0, 0);
     }
 
-    // 14 - invalid negative side (expect panic)
-
-    // 15 - invalid type string (expect panic)
-
-    // 16 - invalid type float (expect panic)
+    // invalid inputs impossible, enforced by rust compiler
 
 }
