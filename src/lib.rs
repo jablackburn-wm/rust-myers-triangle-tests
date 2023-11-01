@@ -63,16 +63,44 @@ mod tests {
     }
 
 
+    // 6 - invalid because a + b = c
+    #[test]
+    #[should_panic(expected ="invalid triangle")]
+    fn invalid_zero_area1() {
+        let _result = get_triangle_type(1, 1, 2);
+    }
 
-    // 6 - invalid because 0 length side
-    // 7 - invalid negative side (expect panic)
-    // 8 - invalid because a + b = c
-    // 9 - invalid because a + c = b
-    // 10 - invalid because b + c = a
-    // 11 - invalid because a + b < c 
-    // 12 - invalid because a + c < b
-    // 13 - invalid because b + c < a
-    // 14 - invalid because all sides are 0
+    // 7 - invalid because a + c = b
+    #[test]
+    #[should_panic(expected ="invalid triangle")]
+    fn invalid_zero_area2() {
+        let _result = get_triangle_type(1, 2, 1);
+    }
+
+    // 8 - invalid because b + c = a
+    #[test]
+    #[should_panic(expected ="invalid triangle")]
+    fn invalid_zero_area3() {
+        let _result = get_triangle_type(2, 1, 1);
+    }
+
+    // 9 - invalid because a + b < c 
+
+    // 10 - invalid because a + c < b
+
+    // 11 - invalid because b + c < a
+
+
+
+
+    // 12 - invalid because 0 length side
+
+    // 13 - invalid because all sides are 0
+
+    // 14 - invalid negative side (expect panic)
+
     // 15 - invalid type string (expect panic)
+
     // 16 - invalid type float (expect panic)
+
 }
